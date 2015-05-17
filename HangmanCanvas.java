@@ -5,12 +5,24 @@
  */
 
 import acm.graphics.*;
+import java.awt.Canvas.*;
+import sun.misc.Cleaner.*;
+import acm.graphics.*;
 
 public class HangmanCanvas extends GCanvas {
+	
+	private double xHangman, yHangman, yBody, yLeg;
+	private int numberOfWrongGuesses;
+	private GLabel wrongGuesses,currentWord;
 
 /** Resets the display so that only the scaffold appears */
 	public void reset() {
 		/* You fill this in */
+		removeAll();
+		numberOfWrongGuesses = 0;
+		xHangman = 
+		yHangman = 
+		GPen scaffold = new GPen(xHangman, yHangman);
 	}
 
 /**
