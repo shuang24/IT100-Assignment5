@@ -46,6 +46,7 @@ public class HangmanCanvas extends GCanvas {
  */
 	public void displayWord(String word) {
 		/* You fill this in */
+		currentWord.setLabel(word);
 	}
 
 /**
