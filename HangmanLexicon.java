@@ -32,6 +32,8 @@ public class HangmanLexicon {
 			throw new ErrorException(ex);
 		}
 	}
+	
+	/** Returns the number of words in the lexicon */
 	// public int getWordCount() {
 	// return 10;
 	// }
