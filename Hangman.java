@@ -12,6 +12,15 @@ import acm.util.*;
 import java.awt.*;
 
 public class Hangman extends ConsoleProgram {
+	
+	private String wordToGuess;
+	private String currentWord;
+	private HangmanCanvas canvas;
+	
+	public void init() {
+		canvas = new HangmanCanvas();
+		add(canvas);
+	}
 
     public void run() {
 		println("Welcome to Hangman!");
@@ -20,6 +29,14 @@ public class Hangman extends ConsoleProgram {
 		RandomGenerator rgen = RandomGenerator.getInstance();
 		
 		wordToGuess = lexicon.getWord()(rgen.nextInt(lexicon.getWordCount()));
+		currentWord = dashifyWord();
+		boolean gameWon = false;
+		int numberOfGuessesleft = 8;
+		canvas.reset();
+		
+		while (!gameWon && (numberOfGuessLeft > 0)) {
+			canvas.displayWord(currentWord);
+		}
 	}
 
 }
