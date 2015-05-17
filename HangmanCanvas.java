@@ -20,8 +20,8 @@ public class HangmanCanvas extends GCanvas {
 		/* You fill this in */
 		removeAll();
 		numberOfWrongGuesses = 0;
-		xHangman = 
-		yHangman = 
+		xHangman = getWidth()/2;
+		yHangman =  getHeight()/2;
 		GPen scaffold = new GPen(xHangman, yHangman);
 	}
 
