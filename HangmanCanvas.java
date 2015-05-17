@@ -7,7 +7,7 @@
 import acm.graphics.*;
 import java.awt.Canvas.*;
 import sun.misc.Cleaner.*;
-import acm.graphics.*;
+import java.awt.Graphics.*;
 
 public class HangmanCanvas extends GCanvas {
 	
