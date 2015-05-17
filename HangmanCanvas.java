@@ -21,8 +21,22 @@ public class HangmanCanvas extends GCanvas {
 		removeAll();
 		numberOfWrongGuesses = 0;
 		xHangman = getWidth()/2;
-		yHangman =  getHeight()/2;
+		yHangman =  (getHeight() - SCAFFOLD_HEIGHT) * 0.25 + ROPE_LENGTH;
 		GPen scaffold = new GPen(xHangman, yHangman);
+		scaffold.drawLine(0, -ROPE_LENGTH);
+		scaffold.drawLine(-BEAM_LENGTH, 0);
+		scaffold.drawLine(0, SCAFFOLD_HEIGHT);
+		add(scaffold);
+		
+		double xLabels = xHangman - BEAM_LENGTH;
+		double yLabels = yHangman + SCAFFOLD_HEIGHT;
+		currentWord = new GLabel("");
+		currentWord.setLocation(xLabels, yLabels + HEAD_RADIUS/2);
+		currentWord.setFont("Verdana-30");
+		add(currentWord);
+		wrongGuesses = new GLabel("");
+		wrongGuesses.setLocation(xLabels, yLabels + HEAD_RADIUS);
+		add(wrongGuesses);
 	}
 
 /**
