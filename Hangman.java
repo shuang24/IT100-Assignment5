@@ -14,7 +14,12 @@ import java.awt.*;
 public class Hangman extends ConsoleProgram {
 
     public void run() {
-		/* You fill this in */
+		println("Welcome to Hangman!");
+		
+		HangmanLexicon lexicon = new HangmanLexicon();
+		RandomGenerator rgen = RandomGenerator.getInstance();
+		
+		wordToGuess = lexicon.getWord()(rgen.nextInt(lexicon.getWordCount()));
 	}
 
 }
