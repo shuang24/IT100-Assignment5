@@ -28,15 +28,23 @@ public class Hangman extends ConsoleProgram {
 		HangmanLexicon lexicon = new HangmanLexicon();
 		RandomGenerator rgen = RandomGenerator.getInstance();
 		
-		wordToGuess = lexicon.getWord()(rgen.nextInt(lexicon.getWordCount()));
+		wordToGuess = lexicon.getWord(rgen.nextInt(lexicon.getWordCount()));
 		currentWord = dashifyWord();
 		boolean gameWon = false;
-		int numberOfGuessesleft = 8;
+		int numberOfGuessesLeft = 8;
 		canvas.reset();
 		
-		while (!gameWon && (numberOfGuessLeft > 0)) {
+		while (!gameWon && (numberOfGuessesLeft > 0)) {
 			canvas.displayWord(currentWord);
 		}
 	}
+    
+    private String dashifyWord() {
+    	String result = "";
+    	for (int i = 0; i < wordToGuess.length(); i++) {
+    		result += "-";
+    	}
+    	return result;
+    }
 
 }
