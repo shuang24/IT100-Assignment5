@@ -75,6 +75,20 @@ public class Hangman extends ConsoleProgram {
 	}
 
 	private boolean guessCorrect (char guess) {
-		
+		guess = Character.toUpperCase(guess);
+		boolean guessCorrect =false;
+		String newWord = "";
+		for (int i =0; i < wordToGuess.length(); i++) {
+			if (wordToGuess.charAt(i) == guess) {
+				newWord += guess;
+				guessCorrect = true;
+			}else{
+				newWord += currentWord.charAt(i);
+			}
+		}
+		if (guessCorrect) {
+			currentWord = new String(newWord);
+		}
+		return guessCorrect;
 	}
 }
