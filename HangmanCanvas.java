@@ -62,8 +62,11 @@ public class HangmanCanvas extends GCanvas {
 	/**
 	 * Draw arms
 	 */
-	private void drawArm() {
-		
+	private void drawArm(int side) {
+		GPen arm = new GPen(xHangman, yBody + ARM_OFFSET_FROM_HEAD);
+		arm.drawLine(side * UPPER_ARM_LENGTH, 0);
+		arm.drawLine(0, LOWER_ARM_LENGTH);
+		add(arm);
 	}
 	
 	
