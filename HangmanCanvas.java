@@ -91,6 +91,24 @@ public class HangmanCanvas extends GCanvas {
 
 	private void updateWrongGuesses(char letter) {
 
+		letter = Character.toUpperCase(letter);
+		String newString = "";
+		String oldString = wrongGuesses.getLabel();
+		int length = oldString.length();
+		boolean letterAdded = false;
+		for (int i = 0; i < length; i++) {
+			char ch = oldString.charAt(i);
+			if ( ch < letter) {
+				newString += ch;
+			} else {
+				if (ch > letter) {
+					newString += letter;
+				}
+				newString += oldString.substring(i);
+				letterAdded = true;
+				break;
+			}
+		}
 	}
 
 	/* Constants for the simple version of the picture (in pixels) */
