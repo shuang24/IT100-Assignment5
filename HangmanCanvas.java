@@ -23,7 +23,7 @@ public class HangmanCanvas extends GCanvas {
 		xHangman = getWidth() / 2;
 		yHangman = (getHeight() - SCAFFOLD_HEIGHT) * 0.25 + ROPE_LENGTH;
 		GPen scaffold = new GPen(xHangman, yHangman);
-		scaffold.drawLine(0, - ROPE_LENGTH);
+		scaffold.drawLine(0, -ROPE_LENGTH);
 		scaffold.drawLine(-BEAM_LENGTH, 0);
 		scaffold.drawLine(0, SCAFFOLD_HEIGHT);
 		add(scaffold);
