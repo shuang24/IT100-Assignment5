@@ -38,7 +38,7 @@ public class HangmanCanvas extends GCanvas {
 		wrongGuesses.setLocation(xLabels, yLabels + HEAD_RADIUS);
 		add(wrongGuesses);
 	}
-	
+
 	/**
 	 * Draw head and set y position
 	 */
@@ -49,16 +49,16 @@ public class HangmanCanvas extends GCanvas {
 		yBody = yHangman + d;
 		add(Head);
 	}
-	
+
 	/**
-	 *  Draw Body and leg
+	 * Draw Body and leg
 	 */
 	private void drawBody() {
 		yLeg = yBody + BODY_LENGTH;
 		GLine body = new GLine(xHangman, yBody, xHangman, yLeg);
 		add(body);
 	}
-	
+
 	/**
 	 * Draw arms
 	 */
@@ -68,7 +68,7 @@ public class HangmanCanvas extends GCanvas {
 		arm.drawLine(0, LOWER_ARM_LENGTH);
 		add(arm);
 	}
-	
+
 	/**
 	 * Draw Leg
 	 */
@@ -78,17 +78,17 @@ public class HangmanCanvas extends GCanvas {
 		leg.drawLine(0, LEG_LENGTH);
 		add(leg);
 	}
-	
+
 	/**
 	 * draw foot
 	 */
 	private void drawFoot(int side) {
 		double y = yLeg + LEG_LENGTH;
 		double x = xHangman + side * HIP_WIDTH;
-		GLine foot = new GLine(x,y, x+ side * FOOT_LENGTH, y);
+		GLine foot = new GLine(x, y, x + side * FOOT_LENGTH, y);
 		add(foot);
 	}
-	
+
 	/**
 	 * Updates the word on the screen to correspond to the current state of the
 	 * game. The argument string shows what letters have been guessed so far;
@@ -148,7 +148,7 @@ public class HangmanCanvas extends GCanvas {
 		boolean letterAdded = false;
 		for (int i = 0; i < length; i++) {
 			char ch = oldString.charAt(i);
-			if ( ch < letter) {
+			if (ch < letter) {
 				newString += ch;
 			} else {
 				if (ch > letter) {
