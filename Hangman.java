@@ -44,7 +44,7 @@ public class Hangman extends ConsoleProgram {
 				println("Please enter single letter only!");
 				continue;
 			}
-			if (guessCorrect(guess) {
+			if (guessCorrect(guess)) {
 				println("That guess is correct");
 				if (wordToGuess.equals(currentWord)) {
 					gameWon = true;
