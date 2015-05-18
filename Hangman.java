@@ -38,6 +38,13 @@ public class Hangman extends ConsoleProgram {
 			canvas.displayWord(currentWord);
 			println("The word now looks like this: " + currentWord);
 			println("You have +" numberOfGuessesLeft + "guesses left.");
+			String guessInput = readLine("Your guess: ");
+			char guess;
+			if (guessInput.length() == 0) || (guessInput.length() >1) || !Character.isLetter(guessInput.charAt(0))) {
+				println("Please enter single letter only!");
+				continue;
+			}
+					
 		}
 	}
 
