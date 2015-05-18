@@ -50,6 +50,15 @@ public class HangmanCanvas extends GCanvas {
 		add(Head);
 	}
 	
+	/**
+	 *  Draw Body and leg
+	 */
+	private void drawBody() {
+		yLeg = yBody + BODY_LENGTH;
+		GLine body = new GLine(xHangman, yBody, xHangman, yLeg);
+		add(body);
+	}
+	
 	
 	/**
 	 * Updates the word on the screen to correspond to the current state of the
