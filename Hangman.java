@@ -44,7 +44,21 @@ public class Hangman extends ConsoleProgram {
 				println("Please enter single letter only!");
 				continue;
 			}
-					
+			if (guessCorrect(guess)) {
+				println("That guess is correct");
+				if (wordToGuess.equals(currentWord)) {
+					gameWon = true;
+				} 
+			} else {
+				canvas.noteIncorrectGuess(guess);
+				println("There are no " + guess + "'s in the word.");
+				numberOfGuessesLeft --;
+			}
+		}
+		if (gameWon) {
+			println("You guessed the word " + wordToGuess);
+			println("You Win");
+			canvas.displayWord(currentWord);
 		}
 	}
 
