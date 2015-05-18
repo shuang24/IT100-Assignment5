@@ -59,6 +59,10 @@ public class Hangman extends ConsoleProgram {
 			println("You guessed the word " + wordToGuess);
 			println("You Win");
 			canvas.displayWord(currentWord);
+		} else {
+			println("You are completely hung.");
+			println("The word was: " + wordToGuess);
+			println("You lose.");
 		}
 	}
 
