@@ -109,6 +109,10 @@ public class HangmanCanvas extends GCanvas {
 				break;
 			}
 		}
+		if (!letterAdded) {
+			newString += letter;
+		}
+		wrongGuesses.setLabel(newString);
 	}
 
 	/* Constants for the simple version of the picture (in pixels) */
