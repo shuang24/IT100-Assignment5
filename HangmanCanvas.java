@@ -59,6 +59,13 @@ public class HangmanCanvas extends GCanvas {
 		add(body);
 	}
 	
+	/**
+	 * Draw arms
+	 */
+	private void drawArm() {
+		
+	}
+	
 	
 	/**
 	 * Updates the word on the screen to correspond to the current state of the
