@@ -37,10 +37,11 @@ public class Hangman extends ConsoleProgram {
 		while (!gameWon && (numberOfGuessesLeft > 0)) {
 			canvas.displayWord(currentWord);
 			println("The word now looks like this: " + currentWord);
-			println("You have "+ numberOfGuessesLeft + "guesses left.");
+			println("You have " + numberOfGuessesLeft + "guesses left.");
 			String guessInput = readLine("Your guess: ");
 			char guess;
-			if ((guessInput.length() == 0) || (guessInput.length() > 1) || !Character.isLetter(guessInput.charAt(0))) {
+			if ((guessInput.length() == 0) || (guessInput.length() > 1)
+					|| !Character.isLetter(guess = guessInput.charAt(0))) {
 				println("Please enter single letter only!");
 				continue;
 			}
@@ -48,11 +49,11 @@ public class Hangman extends ConsoleProgram {
 				println("That guess is correct");
 				if (wordToGuess.equals(currentWord)) {
 					gameWon = true;
-				} 
+				}
 			} else {
 				canvas.noteIncorrectGuess(guess);
 				println("There are no " + guess + "'s in the word.");
-				numberOfGuessesLeft --;
+				numberOfGuessesLeft--;
 			}
 		}
 		if (gameWon) {
@@ -74,15 +75,15 @@ public class Hangman extends ConsoleProgram {
 		return result;
 	}
 
-	private boolean guessCorrect (char guess) {
+	private boolean guessCorrect(char guess) {
 		guess = Character.toUpperCase(guess);
-		boolean guessCorrect =false;
+		boolean guessCorrect = false;
 		String newWord = "";
-		for (int i =0; i < wordToGuess.length(); i++) {
+		for (int i = 0; i < wordToGuess.length(); i++) {
 			if (wordToGuess.charAt(i) == guess) {
 				newWord += guess;
 				guessCorrect = true;
-			}else{
+			} else {
 				newWord += currentWord.charAt(i);
 			}
 		}
