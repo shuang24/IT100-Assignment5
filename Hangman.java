@@ -36,6 +36,8 @@ public class Hangman extends ConsoleProgram {
 
 		while (!gameWon && (numberOfGuessesLeft > 0)) {
 			canvas.displayWord(currentWord);
+			println("The word now looks like this: " + currentWord);
+			println("You have +" numberOfGuessesLeft + "guesses left.");
 		}
 	}
 
