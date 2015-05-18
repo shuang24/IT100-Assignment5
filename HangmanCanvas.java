@@ -38,7 +38,19 @@ public class HangmanCanvas extends GCanvas {
 		wrongGuesses.setLocation(xLabels, yLabels + HEAD_RADIUS);
 		add(wrongGuesses);
 	}
+	
+	/**
+	 * Draw head and set y position
+	 */
 
+	private void drawHead() {
+		double d = 2 * HEAD_RADIUS;
+		GOval Head = new GOval(xHangman - HEAD_RADIUS, yHangman, d, d);
+		yBody = yHangman + d;
+		add(Head);
+	}
+	
+	
 	/**
 	 * Updates the word on the screen to correspond to the current state of the
 	 * game. The argument string shows what letters have been guessed so far;
