@@ -69,6 +69,25 @@ public class HangmanCanvas extends GCanvas {
 		add(arm);
 	}
 	
+	/**
+	 * Draw Leg
+	 */
+	private void drawLeg(int side) {
+		GPen leg = new GPen(xHangman, yLeg);
+		leg.drawLine(side * HIP_WIDTH, 0);
+		leg.drawLine(0, LEG_LENGTH);
+		add(leg);
+	}
+	
+	/**
+	 * draw foot
+	 */
+	private void drawFoot(int side) {
+		double y = yleg + LEG_LENGTH;
+		double x = xHangman + side * HIP_WIDTH;
+		GLine foot = new GLine(x,y, x+ side * FOOT_LENGTH, y);
+		add(foot);
+	}
 	
 	/**
 	 * Updates the word on the screen to correspond to the current state of the
