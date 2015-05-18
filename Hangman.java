@@ -74,4 +74,7 @@ public class Hangman extends ConsoleProgram {
 		return result;
 	}
 
+	private boolean guessCorrect (char guess) {
+		
+	}
 }
