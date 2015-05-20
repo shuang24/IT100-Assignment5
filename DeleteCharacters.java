@@ -1,5 +1,5 @@
 /**
- * 
+ * This program removes all occurrences of the character ch from the string str.
  * @author stevenhuang
  *
  */
