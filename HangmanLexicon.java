@@ -28,6 +28,7 @@ public class HangmanLexicon {
 				if (!wordList.contains(line)) {
 					wordList.add(line);
 				}
+				rd.close();
 			}
 		} catch (IOException e) {
 			throw new ErrorException(e);
