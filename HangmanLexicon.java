@@ -29,8 +29,8 @@ public class HangmanLexicon {
 					wordList.add(line);
 				}
 			}
-		} catch (IOException ex) {
-			throw new ErrorException(ex);
+		} catch (IOException e) {
+			throw new ErrorException(e);
 		}
 	}
 
